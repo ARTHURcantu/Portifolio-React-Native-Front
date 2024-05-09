@@ -1,22 +1,31 @@
-import { View, StyleSheet, Image, Text, ScrollView } from "react-native";
+import { View, StyleSheet, Image,} from "react-native";
 
 const NavBar = () => {
     return(
-        <ScrollView con>
-        <View styles={Styles.ConteinerNavBar}>
-            <View>
-                <Image source={{uri: 'https://fastly.picsum.photos/id/655/50/50.jpg?hmac=h55qWEy106YGCR8G6gCpUktJ8_76PNeMB9hb-e8pD4o'}}  />
-                <Text sty></Text>
+        <View style={Styles.ContainerNavBar}>
+            <View >
+                <Image 
+                    source={{uri: 'https://fastly.picsum.photos/id/655/50/50.jpg?hmac=h55qWEy106YGCR8G6gCpUktJ8_76PNeMB9hb-e8pD4o'}} 
+                    style={Styles.Avatar} 
+                />
             </View>
         </View>
-        </ScrollView>
     )
 }
 
 const Styles = StyleSheet.create({
-    ConteinerNavBar: {
+    ContainerNavBar: {
         width: '100%',
+        backgroundColor: '#000',
+        minHeight: 100,
+        justifyContent: space
+    },
+    Avatar: {
+        width: 50,
+        height: 50,
+
     }
+
 })
 
 export default NavBar
