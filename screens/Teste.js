@@ -2,13 +2,11 @@
 import { StyleSheet, View, Text} from "react-native"
 
 // import funções proprias
-import H1 from "../components/H1"
+import NavBar from "../components/NavBar"
 
-const Home = () => {
+const Teste = () => {
     return(
-        <>
-            <H1>so testano ele</H1>
-        </>
+        <NavBar />
     )
 }
 const Styles = StyleSheet.create({
@@ -17,4 +15,4 @@ const Styles = StyleSheet.create({
         backgroundColor: '#F0F0F0F'
     }
 })
-export default Home
+export default Teste
