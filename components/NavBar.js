@@ -17,8 +17,8 @@ const Styles = StyleSheet.create({
     ContainerNavBar: {
         width: '100%',
         backgroundColor: '#000',
-        minHeight: 100,
-        justifyContent: space
+        maxHeight: 100,
+        justifyContent: 'space-around'
     },
     Avatar: {
         width: 50,
