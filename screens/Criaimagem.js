@@ -3,21 +3,21 @@ import {View, TextInput, StyleSheet, ScrollView} from 'react-native'
 import Button from '../components/Button'
 import { useNavigation } from '@react-navigation/native'
 
-const CadastrarProjeto = () => {
+const CadastrarImagem = () => {
     const navigation = useNavigation()
 
-    const [txtName, setTxtName] = useState('')
-    const [TxtUrl_capa, setTxtUrl_capa] = useState('')
+    const [TxtProjetoId, setTxtProjetoId] = useState('')
+    const [TxtUrl, setTxtUrl] = useState('')
 
     const postUser = async () =>{
         try{
           //const result = await fetch('https://backend-api-express-1sem2024-rbd1.onrender.com/user', {
-          const result = await fetch('http://localhost:437/projetos/', { //depois mudar para a rota do render
+          const result = await fetch('http://localhost:437/imagem/', { //depois mudar para a rota do render
             method: "POST",
             headers:{
               "Content-Type": "application/json"
             },
-            body: JSON.stringify({Nome: txtName, imagem_capa: TxtUrl_capa})
+            body: JSON.stringify({projeto_idprojeto: TxtProjetoId, url: TxtUrl})
           })
           const data = await result.json()
           console.log(data)
@@ -37,15 +37,15 @@ const CadastrarProjeto = () => {
             <View style={styles.form}>
                 <TextInput 
                 style={styles.input}
-                placeholder='Nome...'
-                onChangeText={setTxtName}
-                value={txtName}
+                placeholder='id do projeto...'
+                onChangeText={setTxtProjetoId}
+                value={TxtProjetoId}
                 />
                 <TextInput 
                 style={styles.input}
-                placeholder='imagem de capa...'
-                onChangeText={setTxtUrl_capa}
-                value={TxtUrl_capa}
+                placeholder='link da imagem...'
+                onChangeText={setTxtUrl}
+                value={TxtUrl}
                 />
                 <Button 
                     title="Cadastrar Usuário"
@@ -71,4 +71,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default CadastrarProjeto
+export default CadastrarImagem
