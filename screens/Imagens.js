@@ -1,7 +1,7 @@
 // import bibliotecas
 import { StyleSheet, View, Text, ImageBackground, FlatList,} from "react-native"
 import { useState, useEffect } from "react"
-import { useNavigation, useRoute} from "@react-navigation/native"
+import { useNavigation } from "@react-navigation/native"
 
 // import funções proprias
 import H1 from "../components/H1"
@@ -35,13 +35,13 @@ const Home = () => {
             <View style={Styles.containerImagem}>
                 <Button
                     title={"criar uma nova imagem"}
-                    onPress={()=> navigation.navigate('CriarImagem')} 
+                    onPress={()=>  navigation.navigate('Creates', { screen:'CriarImagem'})} 
                 />
                 <H1>Imagens</H1>
 
                 {imagem.length?
                     <FlatList
-                        style={{width:'70%'}}
+                        style={{width:'100%'}}
                         data={imagem}
                         renderItem={({item}) => <CardImagem image={item} />}
                         keyExtractor={item => item.id}

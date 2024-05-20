@@ -1,6 +1,7 @@
 // import bibliotecas
 import { StyleSheet, View, Text, ImageBackground, FlatList} from "react-native"
 import { useState, useEffect } from "react"
+import { useNavigation } from "@react-navigation/native"
 
 // import funções proprias
 import CardProjeto from "../components/CardProjeto"
@@ -8,7 +9,7 @@ import H1 from "../components/H1"
 import Button from "../components/Button"
 
 const Projeto = () => {
-    
+    const navigation = useNavigation()
     const[projeto, setProjeto] =useState([])
     
     const GetProjetos = async() => {
@@ -34,9 +35,7 @@ const Projeto = () => {
         <View style={Styles.containerProjeto}>
                 <Button
                     title={"criar um novo projeto"}
-                    onPress={()=>{ 
-                        navigation.navigate('CriarProjeto')
-                    }} 
+                    onPress={()=> navigation.navigate('Creates', {screen: 'CriarProjeto'}) } 
                 />
             <H1>projetos</H1>
 

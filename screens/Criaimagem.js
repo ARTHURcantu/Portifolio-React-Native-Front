@@ -48,7 +48,7 @@ const CadastrarImagem = () => {
                 value={TxtUrl}
                 />
                 <Button 
-                    title="Cadastrar Usuário"
+                    title="Cadastrar imagem"
                     onPress={postUser}
                 />
             </View>
