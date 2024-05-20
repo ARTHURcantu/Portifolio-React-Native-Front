@@ -41,7 +41,7 @@ const Home = () => {
 
                 {imagem.length?
                     <FlatList
-                        style={{width:'100%'}}
+                        style={{width:'70%'}}
                         data={imagem}
                         renderItem={({item}) => <CardImagem image={item} />}
                         keyExtractor={item => item.id}
