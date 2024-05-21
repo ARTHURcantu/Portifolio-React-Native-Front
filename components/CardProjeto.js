@@ -11,10 +11,8 @@ const CardProjeto = ({projeto}) => {
             navigation.navigate('')
         }}>
             <View style={Styles.card}>
-                <View>
-                    <Text>{projeto.Nome}</Text>
-                    <Image source={projeto.imagem_capa} />
-                </View>
+                <Text>{projeto.Nome}</Text>
+                <Image source={projeto.imagem__capa} style={{width: '90%', height:'78%', marginTop: 3, borderRadius:30}} />
             </View>
         </Pressable>
     )
@@ -23,7 +21,8 @@ const CardProjeto = ({projeto}) => {
 const Styles = StyleSheet.create({
     card:{
         alignItems: 'center',
-        height: 130,
+        height: 130 ,
+        width: '100%', 
         backgroundColor: '#FFF',
         borderRadius: 20,
         marginTop: 5

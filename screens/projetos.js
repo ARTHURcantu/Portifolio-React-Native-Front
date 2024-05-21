@@ -45,7 +45,7 @@ const Projeto = () => {
                     style={{width: '70%'}}
                     data={projeto}
                     renderItem={({item}) => <CardProjeto projeto={item} />}
-                    keyExtractor={item => item.id}
+                    keyExtractor={item => item.idprojeto}
                 /> :
                 <Text style={{color: '#FFF'}}>Loading...</Text>
             }

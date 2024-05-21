@@ -4,9 +4,7 @@ import { Image } from "react-native";
 const CardImagem = ({image}) => {
     return(    
         <View style={Styles.card}>
-            <View>
-                <Image source={image.url}/>
-            </View>
+            <Image source={image.url} style={{width: '90%', height:'90%', borderRadius:30}} />
         </View>
     )
 }
@@ -14,6 +12,7 @@ const CardImagem = ({image}) => {
 const Styles = StyleSheet.create({
     card:{
         alignItems: 'center',
+        justifyContent: 'center',
         height: 130,
         backgroundColor: '#FFF',
         borderRadius: 20,

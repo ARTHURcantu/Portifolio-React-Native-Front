@@ -16,7 +16,7 @@ const Home = () => {
         try{
             const result = await fetch('http://localhost:437/imagem')//depois mudar para a rota do render
             const data = await result.json()
-            console.log(data)
+            console.log(data.imagem)
             setImagem(data.imagem)
         } catch (error){
             console.log('Error getImagem ' + error.message)
@@ -41,10 +41,10 @@ const Home = () => {
 
                 {imagem.length?
                     <FlatList
-                        style={{width:'70%'}}
+                        style={{width: '70%'}}
                         data={imagem}
                         renderItem={({item}) => <CardImagem image={item} />}
-                        keyExtractor={item => item.id}
+                        keyExtractor={item => item.idimagem}
                     /> :
                     <Text style={{color: '#FFF'}}>Loading...</Text>
                 }
