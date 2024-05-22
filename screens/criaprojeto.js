@@ -48,7 +48,7 @@ const CadastrarProjeto = () => {
                 value={TxtUrl_capa}
                 />
                 <Button 
-                    title="Cadastrar Usuário"
+                    title="Cadastrar Projeto"
                     onPress={postUser}
                 />
             </View>
