@@ -43,7 +43,7 @@ const ExibirImagem = () => {
             headers:{
               "Content-Type": "application/json"
             },
-            body: JSON.stringify({projeto_idprojeto: TxtProjetoId, url: TxtUrl})
+            body: JSON.stringify({idimagem: TxtImagemId, projeto_idprojeto: TxtProjetoId, url: TxtUrl})
           })
           const data = await result.json()
           console.log(data)
@@ -65,16 +65,24 @@ const ExibirImagem = () => {
                 <TextInput 
                 style={styles.input}
                 inputMode='numeric'
-                placeholder='id do projeto...'
+                placeholder='id da imagem...'
                 keyboardType="numeric"
-                onChangeText={setTxtProjetoId}
-                value={TxtProjetoId}
+                onChangeText={SetTxtImagemId}
+                value={TxtImagemId}
                 />
                 <TextInput 
                 style={styles.input}
                 placeholder='link da imagem...'
                 onChangeText={setTxtUrl}
                 value={TxtUrl}
+                />
+                <TextInput 
+                style={styles.input}
+                inputMode='numeric'
+                placeholder='id do projeto...'
+                keyboardType="numeric"
+                onChangeText={setTxtProjetoId}
+                value={TxtProjetoId}
                 />
                 <Button 
                     title="editar imagem"
