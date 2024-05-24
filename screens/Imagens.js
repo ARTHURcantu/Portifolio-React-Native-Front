@@ -33,10 +33,21 @@ const Home = () => {
                 style={Styles.imagefundo}
             >
             <View style={Styles.containerImagem}>
-                <Button
-                    title={"criar uma nova imagem"}
-                    onPress={()=>  navigation.navigate('Creates', { screen:'CriarImagem'})} 
-                />
+                <View style={Styles.areaBotao}>
+                    <View style={Styles.Botao}>
+                    <Button
+                        title={"criar uma nova imagem"}
+                        onPress={()=>  navigation.navigate('Creates', { screen:'CriarImagem'})} 
+                    />
+                    </View>
+
+                    <View style={Styles.Botao}>
+                    <Button
+                        title={"editar e excluir"}
+                        onPress={()=>  navigation.navigate('Creates', { screen:'editarimagem'})} 
+                    />
+                    </View>
+                </View>
                 <H1>Imagens</H1>
 
                 {imagem.length?
@@ -58,6 +69,15 @@ const Styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         color: '#FFF'
+    },
+    areaBotao:{
+        width: '100%',
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    Botao:{
+        maxWidth:'50%',
     },
     imagefundo: {
         flex: 1,

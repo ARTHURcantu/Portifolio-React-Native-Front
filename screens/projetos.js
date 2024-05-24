@@ -34,10 +34,21 @@ const Projeto = () => {
             style={Styles.imagefundo}
         >
         <View style={Styles.containerProjeto}>
-                <Button
-                    title={"criar um novo projeto"}
-                    onPress={()=> navigation.navigate('Creates', {screen: 'CriarProjeto'}) } 
-                />
+                <View style={Styles.areaBotao}>
+                    <View style={Styles.Botao}>
+                        <Button
+                            title={"criar um novo projeto"}
+                            onPress={()=> navigation.navigate('Creates', {screen: 'CriarProjeto'}) } 
+                        />
+                        </View>
+
+                    <View style={Styles.Botao}>
+                        <Button
+                            title={"editar e excluir"}
+                            onPress={()=>  navigation.navigate('Creates', { screen:'editarProjeto'})} 
+                        />
+                    </View>
+                </View>
             <H1>projetos</H1>
 
             {projeto.length?
@@ -58,6 +69,15 @@ const Styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         color: '#FFF'
+    },
+    areaBotao:{
+        width: '100%',
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    Botao:{
+        maxWidth:'50%',
     },
     imagefundo: {
         flex: 1,

@@ -124,4 +124,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default ExibirImagem
+export default ExibirProjeto

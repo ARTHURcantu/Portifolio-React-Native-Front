@@ -31,7 +31,7 @@ const ExibirImagem = () => {
           }
         } catch (error){
           console.log('Error postUser ' + error.message)
-          alert(error.message)
+          alert(error)
         }
       } 
 
@@ -47,6 +47,7 @@ const ExibirImagem = () => {
           })
           const data = await result.json()
           console.log(data)
+          alert("deu algo em", data)
           if(data?.success){
             navigation.goBack()
           } else {
@@ -54,7 +55,7 @@ const ExibirImagem = () => {
           }
         } catch (error){
           console.log('Error postUser ' + error.message)
-          alert(error.message)
+          alert(error)
         }
       } 
 

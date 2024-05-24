@@ -8,6 +8,8 @@ import Home from './screens/Imagens';
 import Projeto from './screens/projetos';
 import CadastrarProjeto from './screens/Criaprojeto.js';
 import CadastrarImagem from './screens/Criaimagem.js';
+import ExibirImagem from './screens/ExibirImagem.js';
+import ExibirProjeto from './screens/ExibirProjeto.js';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator()
@@ -29,6 +31,20 @@ const createNavigator = () => {
           headerShown: false
         }}
       />
+      <Stack.Screen
+        name='editarProjeto'
+        component={ExibirProjeto}
+        options={{
+          headerShown: false
+        }}
+      />
+      <Stack.Screen
+      name='editarimagem'
+      component={ExibirImagem}
+      options={{
+        headerShown: false
+      }}
+    />
     </Stack.Navigator>
   )
 }
