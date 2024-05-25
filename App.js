@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //imports de funções proprias
 import Home from './screens/Imagens';
 import Projeto from './screens/projetos';
-import CadastrarProjeto from './screens/Criaprojeto.js';
+import CadastrarProjeto from './screens/criaprojeto.js';
 import CadastrarImagem from './screens/Criaimagem.js';
 import ExibirImagem from './screens/ExibirImagem.js';
 import ExibirProjeto from './screens/ExibirProjeto.js';
