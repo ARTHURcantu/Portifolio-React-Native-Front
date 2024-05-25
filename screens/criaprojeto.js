@@ -11,7 +11,7 @@ const CadastrarProjeto = () => {
 
     const postUser = async () =>{
         try{
-          //const result = await fetch('https://backend-api-express-1sem2024-rbd1.onrender.com/user', {
+          ///const result = await fetch('https://backend-api-express-1sem2024-rbd1.onrender.com/user', {
           const result = await fetch('http://localhost:437/projetos/', { //depois mudar para a rota do render
             method: "POST",
             headers:{
