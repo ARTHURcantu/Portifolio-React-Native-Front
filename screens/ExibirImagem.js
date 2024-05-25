@@ -15,12 +15,11 @@ const ExibirImagem = () => {
     const Delete = async () =>{
       try{
         //const result = await fetch('https://backend-api-express-1sem2024-rbd1.onrender.com/user', {
-        const result = await fetch('http://localhost:437/imagem/', { //depois mudar para a rota do render
-          method: "PUT",
+        const result = await fetch('http://localhost:437/imagem/'+TxtImagemId, { //depois mudar para a rota do render
+          method: "DELETE",
           headers:{
             "Content-Type": "application/json"
-          },
-          body: JSON.stringify({idimagem: TxtImagemId})
+          }
         })
           const data = await result.json()
           console.log(data)
@@ -38,16 +37,15 @@ const ExibirImagem = () => {
       const EditarImagem = async () =>{
         try{
           //const result = await fetch('https://backend-api-express-1sem2024-rbd1.onrender.com/user', {
-          const result = await fetch('http://localhost:437/imagem/', { //depois mudar para a rota do render
+          const result = await fetch('http://localhost:437/imagem/'+TxtImagemId, { //depois mudar para a rota do render
             method: "PUT",
             headers:{
               "Content-Type": "application/json"
             },
-            body: JSON.stringify({idimagem: TxtImagemId, projeto_idprojeto: TxtProjetoId, url: TxtUrl})
+            body: JSON.stringify({projeto_idprojeto: TxtProjetoId, url: TxtUrl})
           })
           const data = await result.json()
           console.log(data)
-          alert("deu algo em", data)
           if(data?.success){
             navigation.goBack()
           } else {

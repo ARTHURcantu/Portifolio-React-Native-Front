@@ -8,7 +8,7 @@ const CardProjeto = ({projeto}) => {
     return(
         <Pressable
         onPress={() => {
-            navigation.navigate('')
+            navigation.navigate('Creates', {screen:'editarProjeto'})
         }}>
             <View style={Styles.card}>
                 <Text>{projeto.Nome}</Text>

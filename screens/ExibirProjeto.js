@@ -15,12 +15,11 @@ const ExibirProjeto = () => {
     const Delete = async () =>{
       try{
         //const result = await fetch('https://backend-api-express-1sem2024-rbd1.onrender.com/user', {
-        const result = await fetch('http://localhost:437/imagem/', { //depois mudar para a rota do render
-          method: "PUT",
+        const result = await fetch('http://localhost:437/projetos/'+TxtProjetoIdOF, { //depois mudar para a rota do render
+          method: "DELETE",
           headers:{
             "Content-Type": "application/json"
-          },
-          body: JSON.stringify({idprojeto: TxtProjetoIdOF})
+          }
         })
           const data = await result.json()
           console.log(data)
@@ -38,12 +37,12 @@ const ExibirProjeto = () => {
       const EditarProjeto = async () =>{
         try{
           //const result = await fetch('https://backend-api-express-1sem2024-rbd1.onrender.com/user', {
-          const result = await fetch('http://localhost:437/imagem/', { //depois mudar para a rota do render
+          const result = await fetch('http://localhost:437/projetos/'+TxtProjetoIdOF, { //depois mudar para a rota do render
             method: "PUT",
             headers:{
               "Content-Type": "application/json"
             },
-            body: JSON.stringify({idprojeto, TxtProjetoIdOF ,Nome: TxtProjetoNome, url: TxtUrl})
+            body: JSON.stringify({Nome: TxtProjetoNome, imagem__capa: TxtUrl})
           })
           const data = await result.json()
           console.log(data)
