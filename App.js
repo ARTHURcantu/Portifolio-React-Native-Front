@@ -55,7 +55,6 @@ const MainTabs = () => (
     <Tab.Screen name="Projetos" component={Projeto} />
   </Tab.Navigator>
 );
-
 export default function App() {
   return (
     <NavigationContainer>
