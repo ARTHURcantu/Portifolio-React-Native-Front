@@ -2,4 +2,3 @@ o expo atualizou kkkk ent de um npm i espo@latest
 aquele site lá que mostra imagens aleatorias : https://picsum.photos/200/300
 testa depois criar um import em um unico arquivo e exporta para todos os outros
 
-doki (thema de animes lá)
